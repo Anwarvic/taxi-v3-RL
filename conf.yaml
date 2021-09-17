@@ -3,4 +3,5 @@ alpha: 0.2   # learning rate
 epsilon: 1.0  # epsilon-greedy policy
 min_epsilon: 0.005 #minimum value for epsilon
 Tmax: 100     # maximum length of our trajectory.
-num_episodes: 20000 # total number of episodes
+window: 100   #number of episodes to average
+num_episodes: 3000 # total number of episodes
