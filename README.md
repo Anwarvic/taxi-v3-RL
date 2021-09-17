@@ -23,7 +23,7 @@ The workspace contains the following files:
 - `conf.yaml`: A YAML file containing the hyper-parameters for agents.
 - `main.py`: The start point for this repo. In this script, you can create agents, run them and compare between their performance.
 - `monitor.py`: The `interact` function tests how well your agent learns from interaction with the environment.
-- `q_-_learning.py`: An agent implemented using Q-Learning algorithm.
+- `q_learning.py`: An agent implemented using Q-Learning algorithm.
 - `sarsa.py`: Three agents implemented using SARSA, SARSAmax, and Expected-SARSA respectively.
 - `utils.py`: Helpful functions.
 
