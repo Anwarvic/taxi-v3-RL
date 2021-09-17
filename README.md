@@ -31,3 +31,8 @@ The workspace contains the following files:
 
 OpenAI Gym [defines "solving"](https://gym.openai.com/envs/Taxi-v3/) this task as getting average return of 9.7 over 100 consecutive trials.
 
+The following figure shows the performance of the different algorithms in this repo:
+
+<div align="Center">
+    <img src="https://i.ibb.co/QJrcFpj/Figure-1.png" width=500>
+</div>
