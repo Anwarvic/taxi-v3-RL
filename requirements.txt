@@ -1,2 +1,4 @@
 gym
+numpy
 pyyaml
+matplotlib
