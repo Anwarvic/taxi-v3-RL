@@ -3,7 +3,7 @@ import sys
 import math
 import numpy as np
 
-def interact(env, agent, num_episodes=20000, window=100):
+def interact(env, agent, conf):
     """ Monitor agent's performance.
     
     Params
@@ -18,12 +18,17 @@ def interact(env, agent, num_episodes=20000, window=100):
     - avg_rewards: deque containing average rewards
     - best_avg_reward: largest value in the avg_rewards deque
     """
+    # read hyper-parameters
+    Tmax = conf["Tmax"]
+    window = conf["window"]
+    num_episodes = conf["num_episodes"]
+
     # initialize average rewards
     avg_rewards = deque(maxlen=num_episodes)
     # initialize best average reward
     best_avg_reward = -math.inf
     # initialize monitor for most recent rewards
-    samp_rewards = deque(maxlen=window)
+    samp_rewards = deque(maxlen=Tmax)
     # for each episode
     for i_episode in range(1, num_episodes+1):
         # begin the episode
@@ -45,8 +50,8 @@ def interact(env, agent, num_episodes=20000, window=100):
                 # save final sampled reward
                 samp_rewards.append(samp_reward)
                 break
-        if (i_episode >= 100):
-            # get average reward from last 100 episodes
+        if (i_episode >= window):
+            # get average reward from last few episodes
             avg_reward = np.mean(samp_rewards)
             # append to deque
             avg_rewards.append(avg_reward)
