@@ -7,6 +7,10 @@ such as:
 - SARSAmax
 - Expected-SARSA
 
+<br>
+<div align="Center">
+    <img src="./assets/demo.gif" width=500>
+</div>
 
 ## Install
 
