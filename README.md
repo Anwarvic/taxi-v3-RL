@@ -1,22 +1,33 @@
 # Taxi-v3 Environment
-My attempt to solve the taxi-v3 OpenAI gym environment using various agents.
+My attempt to solve the taxi-v3 OpenAI gym environment using various algorithms
+such as:
 
-# Description
+- Q-Learning
+- SARSA
+- SARSAmax
+- Expected-SARSA
 
-The workspace contains three files:
 
-- `q_agent.py`: A reinforcement learning agent that uses q-learning.
+## Install
+
+To install dependencies for this repo, run the following command:
+
+```
+pip install -r requirements.txt
+```
+## Description
+
+The workspace contains the following files:
+
+- `agent.py`: A factory for creating RL agents (follows Factory design pattern).
+- `conf.yaml`: A YAML file containing the hyper-parameters for agents.
+- `main.py`: The start point for this repo. In this script, you can create agents, run them and compare between their performance.
 - `monitor.py`: The `interact` function tests how well your agent learns from interaction with the environment.
-- `main.py`: Run this file in the terminal to check the performance of your agent.
+- `q_-_learning.py`: An agent implemented using Q-Learning algorithm.
+- `sarsa.py`: Three agents implemented using SARSA, SARSAmax, and Expected-SARSA respectively.
+- `utils.py`: Helpful functions.
 
-# `main.py` script
+## Environment Benchmark
 
-When you run `main.py`, the agent that you specify in `agent.py` interacts with the environment for 20,000 episodes. The details of the interaction are specified in `monitor.py`, which returns two variables: `avg_rewards` and `best_avg_reward`.
-
-- `avg_rewards` is a deque where `avg_rewards[i]` is the average (undiscounted) return collected by the agent from episodes `i+1` to episode `i+100`, inclusive. So, for instance, `avg_rewards[0]` is the average return collected by the agent over the first 100 episodes.
-- `best_avg_reward` is the largest entry in `avg_rewards`. This is the final score that you should use when determining how well your agent performed in the task.
-
-## Evaluate your Performance
-
-OpenAI Gym [defines "solving"](https://gym.openai.com/envs/Taxi-v1/) this task as getting average return of 9.7 over 100 consecutive trials.
+OpenAI Gym [defines "solving"](https://gym.openai.com/envs/Taxi-v3/) this task as getting average return of 9.7 over 100 consecutive trials.
 
