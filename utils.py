@@ -34,6 +34,7 @@ def compare(env, algorithms):
 
 def render(env, agent):
     while(True):
+        os.system("clear")
         state = env.reset()
         done = False
         while not done:
