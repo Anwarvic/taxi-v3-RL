@@ -7,10 +7,6 @@ class SARSA(QLearning):
         next_reward = (reward + self.gamma*self.Q[next_state, next_action])
         return next_reward
 
-class SARSAmax(QLearning):
-    def _get_next_reward(self, state, action, reward, next_state):
-        next_reward = reward + self.gamma*(self.Q[next_state, :] - self.Q[state, action]).max()
-        return next_reward
 
 class ExpectedSARSA(QLearning):
     def _get_next_reward(self, state, action, reward, next_state):
