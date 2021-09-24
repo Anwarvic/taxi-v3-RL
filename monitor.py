@@ -1,17 +1,19 @@
+"""
+Adapted from a Udacity Deep Learning Nanodegree project!
+"""
 from collections import deque
 import sys
 import math
 import numpy as np
 
-def interact(env, agent, conf):
-    """ Monitor agent's performance.
+def train(env, agent, conf):
+    """ Train agent.
     
     Params
     ======
     - env: instance of OpenAI Gym's Taxi-v1 environment
     - agent: instance of class Agent (see Agent.py for details)
-    - num_episodes: number of episodes of agent-environment interaction
-    - window: number of episodes to consider when calculating average rewards
+    - conf: a dictionary of configuration parameters
 
     Returns
     =======
