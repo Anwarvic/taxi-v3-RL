@@ -28,7 +28,7 @@ The workspace contains the following files (in alphabetical order):
 - `conf.yaml`: A YAML file containing the hyper-parameters for agents.
 - `DQNN_Experimentation.ipynb`: An Ipython notebook containing the experiments for DQNN algorithm.
 - `main.py`: The start point for this repo. In this script, you can create agents, run them and compare between their performance.
-- `monitor.py`: The `interact` function tests how well your agent learns from interaction with the environment.
+- `monitor.py`: The `interact()` function tests how well your agent learns from interaction with the environment.
 - `q_learning.py`: An agent implemented using Q-Learning algorithm.
 - `sarsa.py`: Three agents implemented using SARSA and Expected-SARSA respectively.
 - `utils.py`: Helpful functions.
