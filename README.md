@@ -57,10 +57,10 @@ Now, let's get into the two mains things that can be done with the agents:
     agent = AgentModule(env.observation_space.n, env.action_space.n, conf)
     
     # train the agent
-    avg_rewards, best_avg_reward = interact(env, agent, conf)
+    avg_rewards, best_avg_reward = train(env, agent, conf)
 
     # see it interact with the environment.
-    render(env, agent)
+    interact(env, agent)
     ```
 
 - Compare the performance of different agents:
