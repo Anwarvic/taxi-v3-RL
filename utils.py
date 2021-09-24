@@ -4,7 +4,7 @@ import os
 import yaml
 import matplotlib.pyplot as plt
 
-from monitor import interact
+from monitor import train
 from agent import AgentFactory
 
 
@@ -26,13 +26,13 @@ def compare(env, algorithms):
         print(algo)
         AgentModule = AgentFactory.create_agent(algo)
         agent = AgentModule(env.observation_space.n, env.action_space.n, conf)
-        avg_rewards, _ = interact(env, agent, conf)
+        avg_rewards, _ = train(env, agent, conf)
         plt.plot(avg_rewards)
     if len(algorithms) > 1: plt.legend(labels=algorithms, loc="lower right")
     plt.show()
 
 
-def render(env, agent):
+def interact(env, agent):
     while(True):
         os.system("clear")
         state = env.reset()
