@@ -33,6 +33,43 @@ The workspace contains the following files:
 - `sarsa.py`: Three agents implemented using SARSA and Expected-SARSA respectively.
 - `utils.py`: Helpful functions.
 
+
+## Usage
+
+You can use the agents found in this repository in two main ways. Before getting into that, let's first import all needed resources and define the environment:
+
+```python
+import gym
+from utils import *
+
+env = gym.make('Taxi-v3')
+```
+
+Now, let's get into the two mains things that can be done with the agents:
+- Train an agent and see it interact with the environment:
+    ```python
+    # parse the config file where all hyper-parameters are set
+    conf = load_conf("conf.yaml")
+
+    # define the agent
+    algorithms = "SARSA"
+    AgentModule = AgentFactory.create_agent(algorithms)
+    agent = AgentModule(env.observation_space.n, env.action_space.n, conf)
+    
+    # train the agent
+    avg_rewards, best_avg_reward = interact(env, agent, conf)
+
+    # see it interact with the environment.
+    render(env, agent)
+    ```
+
+- Compare the performance of different agents:
+    ```python
+    compare(env, ["Q-learning", "SARSA", "Expected-SARSA"])
+    ```
+
+These two methods are already provided in the `main.py` file.
+
 ## Environment Benchmark
 
 OpenAI Gym defines ["solving"](https://gym.openai.com/envs/Taxi-v3/) this task as getting average return of 9.7 over 100 consecutive trials.
