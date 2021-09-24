@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 ## Description
 
-The workspace contains the following files:
+The workspace contains the following files (in alphabetical order):
 
 - `agent.py`: A factory for creating RL agents (follows Factory design pattern).
 - `conf.yaml`: A YAML file containing the hyper-parameters for agents.
