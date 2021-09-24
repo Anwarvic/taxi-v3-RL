@@ -4,8 +4,8 @@ such as:
 
 - Q-Learning
 - SARSA
-- SARSAmax
 - Expected-SARSA
+- DQNN
 
 <br>
 <div align="Center">
