@@ -5,7 +5,6 @@ such as:
 - Q-Learning
 - SARSA
 - Expected-SARSA
-- DQNN
 
 <br>
 <div align="Center">
@@ -26,7 +25,6 @@ The workspace contains the following files (in alphabetical order):
 
 - `agent.py`: A factory for creating RL agents (follows Factory design pattern).
 - `conf.yaml`: A YAML file containing the hyper-parameters for agents.
-- `DQNN_Experimentation.ipynb`: An Ipython notebook containing the experiments for DQNN algorithm.
 - `main.py`: The start point for this repo. In this script, you can create agents, run them and compare between their performance.
 - `monitor.py`: The `train()` function tests how well your agent learns from interaction with the environment.
 - `q_learning.py`: An agent implemented using Q-Learning algorithm.
